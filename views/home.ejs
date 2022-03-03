@@ -1,0 +1,13 @@
+<% include partials/header %>
+<body>
+    <div class="blog">
+        <h1>Home</h1>
+        <p><%= Initial %></p>
+        <% allPosts.forEach(function(post){ %>
+            <h1><%= post.postTitle %></h1>
+            <p><%= post.postBody.substring(0,100)+"......" %> <a href="/posts/<%=post.postTitle %>">Read More</a></p>
+        <% }) %>
+    </div>
+</body>
+</html>
+<% include partials/footer %>
